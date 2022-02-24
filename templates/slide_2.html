@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>Туроператор или турагентство</h1>
+    <p>
+        <ol>
+            <li>Напишите в поисковую строку: “Официальный сайт ~сайт турагентства/туроператора~”.</li>
+            <li>После этого появится список сайтов нужного туроператора.</li>
+            <li>Выберите тот, рядом с адресной строкой которого будет находиться галочка - навигационный ответ.*</li>
+        </ol>
+</p>
+    <p>
+    <img src="{{ url_for('static', filename='images/slide_1.png') }}" width="800px">
+    </p>
+<div style="margin-left: 300px;"><div class="message  message--warning">
+  <p>Значок “навигационный ответ” - метка отображается в тех случаях,
+      когда есть высокая степень уверенности в том, что именно этот сайт
+      нужен пользователю по данному запросу.
+  </p>
+</div></div>
+
+</p>
+    <p>
+        Более подробно можно ознакомится по ссылке: <a href="https://rskrf.ru/tips/eksperty-obyasnyayut/turoperatory/?lang=ru">https://rskrf.ru/tips/eksperty-obyasnyayut/turoperatory/?lang=ru</a>
+    </p>
+
+
+
+{% endblock content %}

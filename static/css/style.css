@@ -265,7 +265,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .section-title p {
-  font-style: italic;
+  /*font-style: italic;*/
   color: #666;
   font-family: "Volkhov", serif;
 }
@@ -2712,4 +2712,60 @@ font header .navbar-default .navbar-nav li a:hover {
   font-weight: 600;
 }
 
-/*# sourceMappingURL=maps/style.css.map */
+.message {
+  background-color: #EEEEEE;
+  width: calc(100% - 3em);
+  max-width: 24em;
+  padding: 1em 1em 1em 1.5em;
+  border-left-width: 6px;
+  border-left-style: solid;
+  border-radius: 3px;
+  position: relative;
+  line-height: 1.5;
+}
+.message + .message {
+  margin-top: 2em;
+}
+.message:before {
+  color: white;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 1em;
+  left: -3px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+}
+.message p {
+  margin: 0 0 1em;
+}
+.message p:last-child {
+  margin-bottom: 0;
+}
+
+.message--error {
+  border-left-color: firebrick;
+}
+.message--error:before {
+  background-color: firebrick;
+  content: "‼";
+}
+
+.message--warning {
+  border-left-color: darkorange;
+}
+.message--warning:before {
+  background-color: darkorange;
+  content: "!";
+}
+
+.message--success {
+  border-left-color: darkolivegreen;
+}
+.message--success:before {
+  background-color: darkolivegreen;
+  content: "✔";
+}
