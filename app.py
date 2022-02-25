@@ -5,17 +5,20 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    #fulldoc = int(request.args.get('fulldoc'))
-    slide = int(request.args.get('slide'))
-    print(slide)
-    #if fulldoc == 1:
-    #    return render_template('fulldoc1.html')
-    #if fulldoc == 2:
-    #    return render_template('fulldoc2.html')
-    if 1 <= slide <= 8:
-        return render_template(f'slide_{slide}.html')
+    slide = None
+    slide = request.args.get('slide')
 
-    return render_template('index.html')
+    if slide is not None:
+        slide = int(slide)
+        if 1 <= slide <= 8:
+            return render_template(f'slide_{slide}.html')
+
+    return render_template('main.html')
+
+
+@app.route('/index')
+def main():
+    return render_template('main.html')
 
 
 if __name__ == '__main__':

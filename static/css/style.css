@@ -41,7 +41,7 @@ p {
 ol, ul {
   margin: 0;
   padding: 0;
-  list-style: none;
+  /*list-style: none;*/
 }
 
 iframe {
@@ -2768,4 +2768,10 @@ font header .navbar-default .navbar-nav li a:hover {
 .message--success:before {
   background-color: darkolivegreen;
   content: "✔";
+}
+
+.msg-box{
+  margin-left: 250px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
